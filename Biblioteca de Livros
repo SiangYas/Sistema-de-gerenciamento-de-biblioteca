@@ -1,0 +1,28 @@
+#Criar tabela de livros
+con.execute('CREATE TABLE livros(\
+                id CHAVE PRIMÁRIA INTEIRA,\
+                título TEXTO,\
+                autor TEXTO,\
+                editora TEXTO,\
+                ano_publicação INTEGER,\
+                isbn TEXTO)')
+
+# Criando tabela de usuários
+con.execute('CREATE TABLE usuários(\
+                id CHAVE PRIMÁRIA INTEIRA,\
+                nome TEXT,\
+                nome TEXT,\
+                endereco TEXTO,\
+                e-mail INTEIRO,\
+                telefone TEXTO)')
+
+#Criando tabela de emprestimo
+con.execute('CREATE TABLE emprestimo(\
+                id CHAVE PRIMÁRIA INTEIRA,\
+                id_livro INTEIRO,\
+                id_usuario INTEIRO,\
+                data_emprestimo TEXTO,\
+                data_devolucao TEXTO,\
+                isbn TEXTO)')
+                CHAVE ESTRANGEIRA(id_livro) REFERÊNCIAS livros(id),\
+                CHAVE ESTRANGEIRA(id_usuario) REFERÊNCIAS usuários(id))')
